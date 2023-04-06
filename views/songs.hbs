@@ -7,14 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-     <h1>{{aName}}</h1>
-    <img src="{{aImg}}" alt="{{aName}} Image">
-    {{!-- <form action="/albums/{{aId}}">
-    <input type="text" name="aName" id="">
-    </form> --}}
+    {{#each songs}}
+    <div class="song-card">
+   <div> {{this.name}}</div>
+  <audio src="{{this.audio}}" controls></audio>
+     </div>
 
-   <a href="/albums/{{aId}}">Check out albums here!</a> 
-</body>
-    
+   {{/each}}
 </body>
 </html>
